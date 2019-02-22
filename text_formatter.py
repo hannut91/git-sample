@@ -3,7 +3,7 @@
 """
 
 
-def string_maker(length=0, align='LEFT', padding=''):
+def xstring_maker(length=0, align='LEFT', padding=''):
     """
     param으로 받은 length, align, padding으로 문자열 format을 설정
     """
@@ -28,8 +28,8 @@ if __name__ == '__main__':
         'NICK': 'DUCK',
     }
 
-    name = string_maker(length=13)
-    nick = string_maker(length=20, align='MID', padding='*')
+    name = xstring_maker(length=13)
+    nick = xstring_maker(length=20, align='MID', padding='*')
     layout = [name(data_sample.get('NAME')), nick(data_sample.get('NICK'))]
 
     print(''.join([f'{item}' for item in layout]))
